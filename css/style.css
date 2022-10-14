@@ -114,3 +114,29 @@ header {
 #button-add-start-hover svg path {
   fill: var(--tx-button-hover);
 }
+
+main {
+  margin: 0 auto;
+}
+
+table {
+  border-radius: 5px;
+  border: 1px solid var(--bd-tb-color);
+  border-collapse: collapse;
+
+  /* padding: 1.6rem 4rem; */
+  max-width: 11.2rem;
+}
+
+table thead {
+  background-color: var(--bg-tb-header);
+}
+
+table thead th {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  color: var(--tx-tb-color);
+
+  border-radius: 5px;
+  padding: 1.6rem 4rem;
+}
