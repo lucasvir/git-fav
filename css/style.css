@@ -117,8 +117,12 @@ header {
   color: var(--tx-bt-hover);
 }
 
-#button-add-start-hover svg path {
+.button-add-start-hover svg path {
   fill: var(--tx-button-hover);
+}
+
+.button-add-start-not-hover svg path {
+  fill: #fff;
 }
 
 main {
@@ -150,6 +154,24 @@ table thead th {
   padding: 1.6rem 4rem;
 }
 
+table thead th:first-child {
+  min-width: 47rem;
+}
+
+/* table tbody tr .td-no-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+} */
+
+.td-no-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+
 table tbody td {
   font-size: 2rem;
   line-height: 3.2rem;
@@ -176,6 +198,10 @@ table tbody tr:nth-child(even) {
   min-width: 50rem;
 }
 
+.td-user span {
+  font-weight: 400;
+}
+
 .user-img {
   width: 5.6rem;
   height: 5.6rem;
@@ -185,6 +211,10 @@ table tbody tr:nth-child(even) {
 .td-actions {
   color: var(--rmv-color);
   font-weight: 700;
+}
+
+.td-actions span {
+  cursor: pointer;
 }
 
 .td-repos,
