@@ -50,6 +50,12 @@ body * {
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  font-weight: 700;
+  color: var(--tx-tb-color);
+  text-decoration: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -120,12 +126,14 @@ main {
 }
 
 table {
-  border-radius: 5px;
-  border: 1px solid var(--bd-tb-color);
   border-collapse: collapse;
+  border-radius: 5px;
+  border-style: hidden; /* hide standard table (collapsed) border */
+  box-shadow: 0 0 0 2px var(--bd-tb-color); /* this draws the table border  */
 
-  /* padding: 1.6rem 4rem; */
-  max-width: 11.2rem;
+  color: var(--tx-tb-color);
+
+  width: 100%;
 }
 
 table thead {
@@ -137,6 +145,50 @@ table thead th {
   line-height: 3.2rem;
   color: var(--tx-tb-color);
 
+  text-align: left;
   border-radius: 5px;
   padding: 1.6rem 4rem;
+}
+
+table tbody td {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+
+  padding: 1.6rem 4rem;
+  text-align: left;
+}
+
+table tbody tr {
+  border: 1px solid var(--bd-tb-color);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--bg-row-even);
+}
+
+.td-user {
+  display: flex;
+  align-items: center;
+
+  gap: 1.6rem;
+
+  min-width: 50rem;
+}
+
+.user-img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+}
+
+.td-actions {
+  color: var(--rmv-color);
+  font-weight: 700;
+}
+
+.td-repos,
+.td-followers,
+.td-actions {
+  text-align: center;
 }
