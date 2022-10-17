@@ -167,7 +167,6 @@ table thead th {
   color: var(--tx-tb-color);
 
   text-align: left;
-  border-radius: 5px;
   padding: 1.6rem 4rem;
 }
 
@@ -204,7 +203,9 @@ table tbody td {
 }
 
 table tbody tr {
-  border: 1px solid var(--bd-tb-color);
+  border-bottom: 1px solid var(--bd-tb-color);
+  border-left: none;
+  border-right: none;
 }
 
 table tbody tr:nth-child(even) {
