@@ -122,10 +122,10 @@ export class FavoritesView extends Favorites {
   noFavoritesPage() {
     const blankTr = document.createElement('tr');
     blankTr.innerHTML = `
-      <div class="no-page">
+        <td class="td-no-page">
           <img class="no-favorites" src="./assets/icons/star-2.svg" alt=""/>
           <p class="no-favorites-text">Nenhum favorito ainda</p>
-      </div>    
+        </td>
           `;
 
     return blankTr;

@@ -10,6 +10,7 @@
   --bg-bt-hover: #fff;
 
   --bd-tb-color: rgba(74, 128, 140, 1);
+  --scrollbar-color: #4a808c;
 
   --rmv-color: #f75a68;
 
@@ -17,6 +18,7 @@
   --tx-placehoder: #7c7c8a;
   --tx-button-color: #fff;
   --tx-button-hover: #065e7c;
+  --tx-no-page: #4e5455;
 }
 
 * {
@@ -127,17 +129,32 @@ header {
 
 main {
   margin: 0 auto;
+  height: 50rem;
+  border: 1px solid var(--bd-tb-color);
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 10px;
 }
 
 table {
   border-collapse: collapse;
-  border-radius: 5px;
-  border-style: hidden; /* hide standard table (collapsed) border */
-  box-shadow: 0 0 0 2px var(--bd-tb-color); /* this draws the table border  */
 
   color: var(--tx-tb-color);
 
   width: 100%;
+
+  /* margin-bottom: 6rem; */
 }
 
 table thead {
@@ -158,18 +175,23 @@ table thead th:first-child {
   min-width: 47rem;
 }
 
-/* table tbody tr .td-no-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6rem;
-} */
-
 .td-no-page {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6rem;
+}
+
+.td-no-page img {
+  width: 13.2rem;
+}
+
+.td-no-page p {
+  font-size: 4rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+
+  color: var(--tx-no-page);
 }
 
 table tbody td {
