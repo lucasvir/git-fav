@@ -31,6 +31,7 @@ export class Favorites {
 
       this.entries = [user, ...this.entries];
       this.update();
+      this.needScrollBar();
       this.save();
     } catch (error) {
       alert(error.message);
@@ -92,6 +93,7 @@ export class FavoritesView extends Favorites {
       this.tbody.append(row);
     });
 
+    this.needScrollBar();
     this.save();
   }
 
@@ -122,7 +124,7 @@ export class FavoritesView extends Favorites {
   noFavoritesPage() {
     const blankTr = document.createElement('tr');
     blankTr.innerHTML = `
-        <td class="td-no-page">
+        <td class="td-no-page" colspan="4">
           <img class="no-favorites" src="./assets/icons/star-2.svg" alt=""/>
           <p class="no-favorites-text">Nenhum favorito ainda</p>
         </td>
@@ -135,6 +137,16 @@ export class FavoritesView extends Favorites {
     if (this.entries.length === 0) {
       const noFavPage = this.noFavoritesPage();
       this.tbody.append(noFavPage);
+    }
+  }
+
+  needScrollBar() {
+    const hasScrollBar = this.tbody.childNodes.length >= 5;
+
+    if (hasScrollBar) {
+      this.root.classList.add('scroll-table');
+    } else {
+      this.root.classList.remove('scroll-table');
     }
   }
 }

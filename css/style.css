@@ -82,7 +82,7 @@ header {
   background-color: var(--bg-placehorder);
 
   color: var(--tx-placehoder);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 
   border: none;
   border-radius: 5px;
@@ -132,6 +132,9 @@ main {
   height: 50rem;
   border: 1px solid var(--bd-tb-color);
   border-radius: 5px;
+}
+
+.scroll-table {
   overflow-y: scroll;
 }
 
@@ -171,18 +174,17 @@ table thead th {
 }
 
 table thead th:first-child {
-  min-width: 47rem;
+  min-width: 52rem;
 }
 
 .td-no-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6rem;
+  text-align: center;
+  border: none;
 }
 
 .td-no-page img {
   width: 13.2rem;
+  margin: 6rem 0 4rem 0;
 }
 
 .td-no-page p {
@@ -203,12 +205,14 @@ table tbody td {
 }
 
 table tbody tr {
-  border-bottom: 1px solid var(--bd-tb-color);
   border-left: none;
   border-right: none;
 }
 
 table tbody tr:nth-child(even) {
+  border-top: 1px solid var(--bd-tb-color);
+  border-bottom: 1px solid var(--bd-tb-color);
+
   background-color: var(--bg-row-even);
 }
 
